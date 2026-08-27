@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultation | AURUM GATES Architectural Security</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#0b0b0c",
+                        "inverse-primary": "#5f5e5f",
+                        "background": "#141313",
+                        "on-tertiary": "#32302e",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#7b797a",
+                        "on-primary-fixed": "#1c1b1c",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-secondary-fixed": "#1b1c1e",
+                        "surface-dim": "#141313",
+                        "primary-fixed": "#e5e2e3",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#0c0b09",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#c7c6c8",
+                        "secondary-container": "#464749",
+                        "surface-tint": "#c8c6c7",
+                        "on-surface-variant": "#c7c6ca",
+                        "on-tertiary-container": "#7c7976",
+                        "surface-container-highest": "#353434",
+                        "secondary-fixed": "#e3e2e4",
+                        "primary": "#c8c6c7",
+                        "on-background": "#e5e2e1",
+                        "on-primary": "#313031",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#141313",
+                        "surface-container-high": "#2b2a2a",
+                        "on-secondary-fixed-variant": "#464749",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary": "#cac6c2",
+                        "tertiary-fixed": "#e7e2dd",
+                        "on-primary-fixed-variant": "#474647",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "on-secondary-container": "#b5b5b7",
+                        "secondary": "#c7c6c8",
+                        "on-tertiary-fixed-variant": "#494644",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353434",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#46464a",
+                        "on-secondary": "#2f3032",
+                        "outline": "#919094",
+                        "surface-container": "#201f1f",
+                        "accent": "#C7A360"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "40px",
+                        "md": "16px",
+                        "xxl": "80px",
+                        "sm": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "body-lg": ["Sora"],
+                        "section-title-mobile": ["Sora"],
+                        "label-caps": ["Sora"],
+                        "display-hero-mobile": ["Sora"],
+                        "section-title": ["Sora"],
+                        "button": ["Sora"],
+                        "headline-sm": ["Sora"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0b0b0c;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(31, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(199, 163, 96, 0.3);
+            box-shadow: 0 0 30px rgba(199, 163, 96, 0.05);
+        }
+        .accent-border-glow:focus-within {
+            border-color: #C7A360;
+            box-shadow: 0 0 10px rgba(199, 163, 96, 0.2);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #C7A360 ! from-accent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-display-hero text-headline-sm tracking-tighter text-primary dark:text-primary font-bold">
+                AURUM GATES
+            </div>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="product_listing.html">Systems</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="technical_specifications.html">Hardware</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="custom_projects.html">Custom</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="deals_offers.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="technical_specifications.html">Technical</a>
+</div>
+<div class="flex items-center space-x-md">
+<div class="flex space-x-sm">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:text-primary transition-all duration-300">shopping_bag</button>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:text-primary transition-all duration-300">person</button>
+</div>
+<button class="bg-[#C7A360] text-[#0b0b0c] px-6 py-2 rounded-full font-button text-sm font-semibold scale-95 active:scale-90 transition-transform">
+                    Consultation
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex items-center justify-center overflow-hidden py-xxl">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0b0b0c]/80 to-[#0b0b0c]"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl mx-auto">
+<span class="inline-block font-label-caps text-accent mb-md tracking-widest uppercase">Securing Legacy</span>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface mb-md">
+                    Architectural <span class="text-accent italic">Fortification</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Initiate a confidential dialogue with our security engineers to design a bespoke entrance system that blends impenetrable security with haute-architecture.
+                </p>
+</div>
+</section>
+<!-- Consultation Form Section -->
+<section class="px-gutter pb-xxl relative">
+<div class="max-w-5xl mx-auto">
+<div class="glass-card rounded-xl p-lg md:p-xl shadow-2xl relative">
+<div class="mb-xl border-b border-outline-variant/20 pb-md flex justify-between items-end">
+<div>
+<h2 class="font-section-title text-section-title-mobile md:text-section-title text-on-surface mb-2">Project Brief</h2>
+<p class="text-on-surface-variant font-body-md">Step 1 of 2: Technical Specifications &amp; Contact</p>
+</div>
+<div class="text-right hidden md:block">
+<p class="text-accent font-label-caps mb-1">Encrypted Transmission</p>
+<span class="material-symbols-outlined text-accent" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+<form class="space-y-xl">
+<!-- Basic Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent transition-colors" placeholder="Alexander Thorne" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent transition-colors" placeholder="a.thorne@domain.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent transition-colors" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Project Name / Reference</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent transition-colors" placeholder="Blackwood Estate Phase II" type="text"/>
+</div>
+</div>
+<!-- Project Type & Budget -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Project Type</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent appearance-none">
+<option>Private Estate</option>
+<option>Government Facility</option>
+<option>Commercial Landmark</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Estimated Budget</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent appearance-none">
+<option>$100k - $250k</option>
+<option>$250k - $500k</option>
+<option>$500k - $1M</option>
+<option>$1M+</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Timeline</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent appearance-none">
+<option>Immediate</option>
+<option>3-6 Months</option>
+<option>Planning Phase</option>
+</select>
+</div>
+</div>
+<!-- Security Requirements Grid -->
+<div class="space-y-4">
+<label class="font-label-caps text-on-surface-variant block mb-2">Security Requirements</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<label class="flex items-center space-x-3 p-4 glass-card rounded-lg cursor-pointer hover:border-accent/50 group">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface text-accent focus:ring-accent" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Ballistic Protection</span>
+</label>
+<label class="flex items-center space-x-3 p-4 glass-card rounded-lg cursor-pointer hover:border-accent/50 group">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface text-accent focus:ring-accent" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Automated Entrances</span>
+</label>
+<label class="flex items-center space-x-3 p-4 glass-card rounded-lg cursor-pointer hover:border-accent/50 group">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface text-accent focus:ring-accent" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Biometric Access</span>
+</label>
+<label class="flex items-center space-x-3 p-4 glass-card rounded-lg cursor-pointer hover:border-accent/50 group">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface text-accent focus:ring-accent" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Perimeter Monitoring</span>
+</label>
+</div>
+</div>
+<!-- Details -->
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant">Message / Design Specifics</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 font-body-md text-on-surface focus:border-accent transition-colors" placeholder="Outline specific site challenges or aesthetic requirements..." rows="5"></textarea>
+</div>
+<div class="pt-md flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="flex items-center space-x-3 text-on-surface-variant/60 text-sm">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Data handled under strict ISO 27001 compliance.</span>
+</div>
+<button class="w-full md:w-auto bg-[#C7A360] text-[#0b0b0c] px-12 py-5 rounded-lg font-button text-lg font-bold hover:shadow-[0_0_20px_rgba(199,163,96,0.3)] transition-all transform active:scale-95" type="submit">
+                                Submit Formal Request
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Trust & Process Section -->
+<section class="py-xxl bg-surface-container-lowest overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
+<div class="relative rounded-2xl overflow-hidden h-[400px] group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro close-up of a brushed obsidian metal security gate panel with integrated gold fiber optics. The lighting is low and atmospheric, emphasizing the matte texture and the precision engineering of the custom hinges. Deep blacks and golden highlights define the high-end industrial aesthetic of the security hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABPDiawqAli0UNSXJWNYo6yddAu_W_uJuU6Ukg1ki7TBDwCE19t5dThC6MhsHncs9TyKfYF7eHX6eAgu8lVexmVQhLEoyX7AAOAlh9PTup5ujrZVPEZCEgddhwZrU1DWDINuJkCe1j8IaWniBeOi8HxJwh2IFLcjuAeFPhm-LNRvFgOcB7383j9GM_VeT0-mgw6Lzv_fIrkmVkROEh2YV2nnVopBX247C9cUpOjd3KntKKNx3iV5KPMlLOMU1FBBxhdc4voQCrVzNF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0c] to-transparent"></div>
+<div class="absolute bottom-lg left-lg">
+<h3 class="font-headline-sm text-on-surface">Physical Security Specialists</h3>
+<p class="text-on-surface-variant text-sm">Precision Manufacturing in Zurich &amp; Los Angeles</p>
+</div>
+</div>
+<div class="space-y-lg">
+<h2 class="font-section-title text-on-surface">The Aurum Standard</h2>
+<div class="space-y-xl">
+<div class="flex items-start space-x-md">
+<div class="bg-accent/10 p-4 rounded-xl border border-accent/20">
+<span class="material-symbols-outlined text-accent" style="font-variation-settings: 'FILL' 1;">policy</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface mb-2">Process Discretion</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed">We operate under ironclad Non-Disclosure Agreements. Every project is assigned a secure ID; no client names or locations are stored in unsecured databases.</p>
+</div>
+</div>
+<div class="flex items-start space-x-md">
+<div class="bg-accent/10 p-4 rounded-xl border border-accent/20">
+<span class="material-symbols-outlined text-accent" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface mb-2">Global Deployment</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed">Our deployment teams travel globally to ensure seamless installation and integration with local security networks, from private islands to high-density urban centers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xxl max-w-container-max mx-auto">
+<div class="space-y-md">
+<div class="font-display-hero text-headline-sm text-primary font-bold">AURUM GATES</div>
+<p class="text-on-surface-variant font-body-md">Architectural security for the world's most significant estates.</p>
+</div>
+<div class="flex flex-col space-y-sm">
+<h5 class="text-on-surface font-label-caps mb-2">Navigation</h5>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="product_listing.html">Systems</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="#">Technical Specs</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="deals_offers.html">Case Studies</a>
+</div>
+<div class="flex flex-col space-y-sm">
+<h5 class="text-on-surface font-label-caps mb-2">Legal &amp; Support</h5>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-opacity font-body-md" href="home_page.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-opacity font-body-md" href="home_page.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-opacity font-body-md" href="technical_specifications.html">Warranty</a>
+</div>
+<div class="flex flex-col space-y-sm">
+<h5 class="text-on-surface font-label-caps mb-2">Contact</h5>
+<p class="text-on-surface-variant font-body-md">HQ: Zurich, Switzerland</p>
+<p class="text-on-surface-variant font-body-md">Inquiries: concierge@aurumgates.com</p>
+<div class="flex space-x-md mt-md">
+<span class="material-symbols-outlined text-accent">share</span>
+<span class="material-symbols-outlined text-accent">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-md border-t border-outline-variant/10 text-on-surface-variant text-sm">
+            © 2024 Aurum Architectural Security. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Simple form interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Consultation request submitted securely. An agent will contact you shortly.');
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroText = document.querySelector('.relative.z-10');
+            heroText.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
+    </script>
+</body></html>
