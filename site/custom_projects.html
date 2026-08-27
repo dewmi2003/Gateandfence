@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Projects | AURUM GATES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#313031",
+                    "on-tertiary-fixed": "#1d1b19",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-container": "#7b797a",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#3a3939",
+                    "on-secondary": "#2f3032",
+                    "inverse-primary": "#5f5e5f",
+                    "secondary-fixed-dim": "#c7c6c8",
+                    "on-primary-fixed": "#1c1b1c",
+                    "surface-container": "#201f1f",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "primary-container": "#0b0b0c",
+                    "on-primary-fixed-variant": "#474647",
+                    "secondary-container": "#464749",
+                    "tertiary": "#cac6c2",
+                    "background": "#141313",
+                    "outline": "#919094",
+                    "on-surface-variant": "#c7c6ca",
+                    "surface-tint": "#c8c6c7",
+                    "surface-variant": "#353434",
+                    "surface-container-high": "#2b2a2a",
+                    "on-tertiary": "#32302e",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-background": "#e5e2e1",
+                    "surface": "#141313",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-dim": "#141313",
+                    "on-tertiary-container": "#7c7976",
+                    "on-tertiary-fixed-variant": "#494644",
+                    "tertiary-fixed-dim": "#cac6c2",
+                    "secondary": "#c7c6c8",
+                    "tertiary-fixed": "#e7e2dd",
+                    "primary-fixed": "#e5e2e3",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#353434",
+                    "on-secondary-fixed-variant": "#464749",
+                    "error": "#ffb4ab",
+                    "primary": "#c8c6c7",
+                    "outline-variant": "#46464a",
+                    "secondary-fixed": "#e3e2e4",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-container": "#b5b5b7",
+                    "tertiary-container": "#0c0b09",
+                    "accent": "#C7A360"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "xl": "40px",
+                    "container-max": "1440px",
+                    "xs": "4px",
+                    "xxl": "80px",
+                    "lg": "24px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Sora"],
+                    "button": ["Sora"],
+                    "display-hero": ["Sora"],
+                    "body-md": ["Sora"],
+                    "section-title": ["Sora"],
+                    "display-hero-mobile": ["Sora"],
+                    "section-title-mobile": ["Sora"],
+                    "label-caps": ["Sora"],
+                    "body-lg": ["Sora"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #0B0B0C;
+            color: #e5e2e1;
+            font-family: 'Sora', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(31, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card:hover {
+            border-color: #C7A360;
+            transform: translateY(-4px);
+            background: rgba(31, 32, 34, 0.8);
+        }
+        .metallic-gradient {
+            background: linear-gradient(135deg, #C7A360 0%, #E5C78A 50%, #C7A360 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .noise-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .vertical-rhythm {
+            margin-bottom: 80px;
+        }
+        .input-gold-focus:focus {
+            outline: none;
+            border-color: #C7A360;
+            box-shadow: 0 0 0 1px #C7A360;
+        }
+    </style>
+</head>
+<body class="dark bg-surface text-on-surface selection:bg-accent selection:text-on-primary">
+<div class="fixed inset-0 noise-texture z-0"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-display-hero text-headline-sm tracking-tighter text-primary dark:text-primary">
+                AURUM GATES
+            </div>
+<div class="hidden md:flex items-center space-x-lg font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="product_listing.html">Systems</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="technical_specifications.html">Hardware</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1" href="custom_projects.html">Custom</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="deals_offers.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="technical_specifications.html">Technical</a>
+</div>
+<div class="flex items-center space-x-md">
+<div class="hidden lg:flex items-center space-x-sm px-md py-xs bg-surface-container rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 20px;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 placeholder-on-surface-variant/50" placeholder="Search..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all duration-300 scale-95 active:scale-90">shopping_bag</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all duration-300 scale-95 active:scale-90">person</button>
+<button class="bg-accent text-on-primary font-button text-button px-lg py-sm rounded-lg hover:brightness-110 transition-all scale-95 active:scale-90">
+                    Consultation
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative z-10 pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-gradient-to-r from-[#0B0B0C] via-[#0B0B0C]/80 to-transparent"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A luxurious, ultra-modern architectural estate entrance featuring dark, matte steel and reinforced glass structures. The lighting is low and dramatic, with warm golden rim lighting emphasizing the sharp geometric lines of the high-security gate. The scene is set in a quiet, high-end residential neighborhood at twilight, exuding an atmosphere of exclusive privacy and formidable protection. The overall aesthetic is industrial minimalism fused with architectural luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZnmu6rZqGDGjupFqCCrx6adhoxmgZnd7IW0S_0nv4RtKmkfWi49YIVAoCh4tzc1-1a-oYIyqc0v5BN4jyq5KZAJ2q0WE61P-tmsIva3YmMV95qvK3ct-t0mt3niRbRhSizBBgj-jXEYmVFYSWSyhwpreOQRPzNINATy3JTFzZ8MRuzhvrn4aUz9GJUPN2lbFFlMh8fiYZRHmbawO6CYg3x6j7IDg-g_6nZ05RGdHt1NIEIhYirrpC8MraJYwmzymAftaaTSsKIHUN')"></div>
+</div>
+<div class="relative z-10 px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<span class="inline-block font-label-caps text-label-caps text-accent mb-md tracking-widest uppercase">Elite Custom Engineering</span>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero mb-lg text-on-surface">
+                        Bespoke <span class="metallic-gradient">Architectural Security</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed max-w-xl">
+                        Where high-security engineering meets uncompromised aesthetic vision. We transform your most ambitious concepts into fortified masterpieces, tailored for the world's most secure estates.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-accent text-on-primary font-button text-button px-xl py-lg rounded-lg hover:brightness-110 transition-all">
+                            Start Collaboration
+                        </button>
+<button class="border border-outline-variant text-on-surface font-button text-button px-xl py-lg rounded-lg hover:bg-white/5 transition-all">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- The Process -->
+<section class="py-xxl px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-xxl">
+<h2 class="font-section-title text-section-title mb-md">Our Seamless Process</h2>
+<div class="w-20 h-1 bg-accent mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg">
+<!-- Step 1 -->
+<div class="glass-card p-xl rounded-xl relative group">
+<span class="absolute top-4 right-6 font-display-hero text-headline-sm text-accent/20">01</span>
+<div class="mb-lg">
+<span class="material-symbols-outlined text-accent text-4xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md text-on-surface">Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep-dive discovery session to align on security protocols, site constraints, and aesthetic goals.</p>
+</div>
+<!-- Step 2 -->
+<div class="glass-card p-xl rounded-xl relative group">
+<span class="absolute top-4 right-6 font-display-hero text-headline-sm text-accent/20">02</span>
+<div class="mb-lg">
+<span class="material-symbols-outlined text-accent text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md text-on-surface">Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision 3D modeling and stress analysis ensuring your design withstands ballistic and kinetic forces.</p>
+</div>
+<!-- Step 3 -->
+<div class="glass-card p-xl rounded-xl relative group">
+<span class="absolute top-4 right-6 font-display-hero text-headline-sm text-accent/20">03</span>
+<div class="mb-lg">
+<span class="material-symbols-outlined text-accent text-4xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md text-on-surface">Fabrication</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Master artisans hand-finish industrial-grade alloys to meet exacting architectural tolerances.</p>
+</div>
+<!-- Step 4 -->
+<div class="glass-card p-xl rounded-xl relative group">
+<span class="absolute top-4 right-6 font-display-hero text-headline-sm text-accent/20">04</span>
+<div class="mb-lg">
+<span class="material-symbols-outlined text-accent text-4xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md text-on-surface">Installation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamless integration with existing site infrastructure, automated systems, and home intelligence hubs.</p>
+</div>
+</div>
+</section>
+<!-- Featured Commissions (Bento Grid Style) -->
+<section class="py-xxl bg-surface-container-lowest">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xxl">
+<div>
+<h2 class="font-section-title text-section-title mb-md">Notable Commissions</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A selection of our most ambitious private security installations, where privacy and art converge.</p>
+</div>
+<button class="text-accent font-button flex items-center gap-sm hover:translate-x-1 transition-transform">
+                        Explore Full Archive <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Project 1 -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A massive, monolithic security gate named 'The Obsidian Vault' featuring matte black carbon-fiber panels and brushed titanium accents. The gate is integrated into a modern concrete wall with integrated warm LED strip lighting at the base. The setting is a minimalist architectural masterpiece in the desert during golden hour, highlighting the contrast between the dark security structure and the warm natural light. The mood is powerful, secure, and highly sophisticated." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJbgF2Yp28w--7dnbakGjL-MbxwZj2EeRFNlmqFgMPMKBpNZRMmFqjxjAdihAiMwZLDt765HL99vmGU3ZogdNHfZiJbGDYcBNuFz8VZqiVvRd4d_EgLwywfM5_Gy7DKAfVVhgFxWQ55XXfWXBLElQhJhkMwP9ovsEQfI7YSsuoGh2lA2K-DmmxpZu2xPEpcoIxXPz1HrRbx0wuoc6SX2BcYAraHujT9Ox-nU2qIl2ZpuknDv5SBe4FouVDjCbrh8C0HztM2jb3Uyql')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">The Obsidian Vault</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-lg">Grade-6 ballistic reinforced gate system with biometric facial recognition integrated into a seamless obsidian-glass facade.</p>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-on-surface font-button text-sm px-lg py-sm rounded hover:bg-accent hover:text-on-primary transition-colors">View Case Study</button>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-fidelity architectural shot of a 'Bunker-Grade Estate Gate' for a corporate skyscraper entry. The gate uses heavy-duty stainless steel mesh with gold-plated decorative accents that conceal reinforced structural beams. The surrounding environment is a clean, glass-and-steel modern plaza at night, illuminated by cool white architectural spotlights that make the metallic surfaces shimmer. The style is modern industrial minimalism with a high-end luxury finish." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbuWdCShR0ExngdClTtcde0u2bP1DnJA8_rDSLvmQO65371jG3sfuuSL3O0tBcxB7_uxERc0U1itKlxXIw0V6e_1bNCG8r30CzxYQKhIqEvSaHE8UCKN_xnSPUEbSPfO9fLPnfatVu_7tucaelFbI4KlrMmcxmfA6hIWo30VLCzx5nIednucG7EqfY_zgawneIYUou4zn9UZEBhIdn_smnEk_nvH5sUoqlzwIWulk2Xvmbn6DLuLv-pw9PM07heEItvV5zB3WlD5BM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Titanium Spine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Articulated kinetic barrier designed for rapid deployment in high-density urban environments.</p>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-on-surface font-button text-sm px-lg py-sm rounded hover:bg-accent hover:text-on-primary transition-colors">View Case Study</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section -->
+<section class="py-xxl relative overflow-hidden">
+<div class="px-gutter max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
+<div>
+<h2 class="font-section-title text-section-title mb-lg">Start Your <span class="metallic-gradient">Custom Project</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed">
+                        Our design and engineering teams are ready to discuss your specific requirements. We handle everything from residential estate perimeters to sensitive government infrastructure.
+                    </p>
+<div class="space-y-lg">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg text-on-surface">Discrete Process</h4>
+<p class="text-on-surface-variant text-sm">Full NDAs and privacy protocols maintained from first contact.</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent">public</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg text-on-surface">Global Deployment</h4>
+<p class="text-on-surface-variant text-sm">Design, fabrication, and installation available worldwide.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-xl rounded-2xl">
+<form class="space-y-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container border-outline-variant/30 rounded-lg p-md text-on-surface input-gold-focus" placeholder="Alexander Thorne" type="text"/>
+</div>
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Project Name</label>
+<input class="w-full bg-surface-container border-outline-variant/30 rounded-lg p-md text-on-surface input-gold-focus" placeholder="The Highland Residence" type="text"/>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Security Requirements</label>
+<textarea class="w-full bg-surface-container border-outline-variant/30 rounded-lg p-md text-on-surface input-gold-focus" placeholder="Describe ballistic needs, automation requirements, or site challenges..." rows="4"></textarea>
+</div>
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Estimated Budget Range</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-md">
+<label class="flex items-center justify-center px-md py-sm bg-surface-container border border-outline-variant/30 rounded-lg cursor-pointer hover:border-accent transition-colors">
+<input class="hidden" name="budget" type="radio"/>
+<span class="text-sm">$50k - $150k</span>
+</label>
+<label class="flex items-center justify-center px-md py-sm bg-surface-container border border-outline-variant/30 rounded-lg cursor-pointer hover:border-accent transition-colors">
+<input class="hidden" name="budget" type="radio"/>
+<span class="text-sm">$150k - $500k</span>
+</label>
+<label class="flex items-center justify-center px-md py-sm bg-surface-container border border-outline-variant/30 rounded-lg cursor-pointer hover:border-accent transition-colors">
+<input class="hidden" name="budget" type="radio"/>
+<span class="text-sm">$500k+</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-accent text-on-primary font-button text-button py-lg rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-md">
+                            Submit Project Brief <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Technical Specs Ticker -->
+<section class="border-y border-outline-variant/20 py-lg overflow-hidden bg-surface-container-lowest">
+<div class="flex items-center whitespace-nowrap gap-xxl animate-[marquee_30s_linear_infinite]">
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">ASTM F2656</span> CRASH RATED
+                </div>
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">UL 325</span> SAFETY COMPLIANT
+                </div>
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">EN 1627</span> RESISTANCE CLASS 4+
+                </div>
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">ISO 9001</span> QUALITY ASSURED
+                </div>
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">NIJ LEVEL III</span> BALLISTIC PROTECTION
+                </div>
+<!-- Duplicate for seamless loop -->
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">ASTM F2656</span> CRASH RATED
+                </div>
+<div class="flex items-center gap-md font-label-caps text-on-surface-variant/40">
+<span class="text-accent">UL 325</span> SAFETY COMPLIANT
+                </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest border-t border-outline-variant/10 mt-xxl relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xxl max-w-container-max mx-auto">
+<div class="space-y-lg">
+<div class="font-display-hero text-headline-sm text-primary">AURUM GATES</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Fortifying the world's most prestigious architectural icons since 1994.</p>
+<div class="flex gap-md">
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" href="#">public</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" href="#">security</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" href="#">mail</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-xl">Systems</h4>
+<ul class="space-y-md font-body-md text-body-md text-on-surface-variant">
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Estate Perimeters</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Anti-Ram Barriers</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Ballistic Pedestrian</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Automated Entrances</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-xl">Legal &amp; Support</h4>
+<ul class="space-y-md font-body-md text-body-md text-on-surface-variant">
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Terms of Service</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Warranty</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Maintenance</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Shipping</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-xl">Newsletter</h4>
+<p class="text-sm text-on-surface-variant mb-md">Receive technical updates on architectural security standards.</p>
+<div class="flex border-b border-outline-variant/30 py-sm">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Email address" type="email"/>
+<button class="material-symbols-outlined text-accent">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-gutter py-lg border-t border-outline-variant/5 text-center text-on-surface-variant text-sm">
+            © 2024 Aurum Architectural Security. All rights reserved.
+        </div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+<script>
+        // Micro-interactions for form radios
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('input[name="budget"]').forEach(r => {
+                    r.parentElement.classList.remove('border-accent', 'bg-accent/10');
+                });
+                if(e.target.checked) {
+                    e.target.parentElement.classList.add('border-accent', 'bg-accent/10');
+                }
+            });
+        });
+
+        // Parallax for Hero
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImage = document.querySelector('.bg-cover');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scroll * 0.4}px)`;
+            }
+        });
+    </script>
+</body></html>
