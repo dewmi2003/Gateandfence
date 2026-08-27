@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Dashboard | AURUM GATES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0b0b0c;
+            color: #e5e2e1;
+            font-family: 'Sora', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(31, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(199, 163, 96, 0.3);
+            background: rgba(31, 32, 34, 0.8);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #c7a360 0%, #8e6f3e 100%);
+        }
+        .text-accent {
+            color: #c7a360;
+        }
+        .border-accent {
+            border-color: #c7a360;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0b0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2b2e;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-secondary-fixed": "#1b1c1e",
+                "tertiary-fixed": "#e7e2dd",
+                "secondary-fixed": "#e3e2e4",
+                "tertiary-fixed-dim": "#cac6c2",
+                "background": "#141313",
+                "primary-fixed-dim": "#c8c6c7",
+                "error": "#ffb4ab",
+                "on-primary-container": "#7b797a",
+                "error-container": "#93000a",
+                "surface-bright": "#3a3939",
+                "primary-container": "#0b0b0c",
+                "on-tertiary-fixed-variant": "#494644",
+                "on-surface": "#e5e2e1",
+                "on-secondary-container": "#b5b5b7",
+                "outline": "#919094",
+                "primary-fixed": "#e5e2e3",
+                "surface-tint": "#c8c6c7",
+                "outline-variant": "#46464a",
+                "secondary-fixed-dim": "#c7c6c8",
+                "on-secondary": "#2f3032",
+                "on-error-container": "#ffdad6",
+                "inverse-on-surface": "#313030",
+                "surface-container-high": "#2b2a2a",
+                "secondary-container": "#464749",
+                "surface-container": "#201f1f",
+                "surface": "#141313",
+                "on-secondary-fixed-variant": "#464749",
+                "secondary": "#c7c6c8",
+                "surface-variant": "#353434",
+                "on-tertiary-container": "#7c7976",
+                "on-background": "#e5e2e1",
+                "tertiary-container": "#0c0b09",
+                "on-primary-fixed-variant": "#474647",
+                "tertiary": "#cac6c2",
+                "on-surface-variant": "#c7c6ca",
+                "on-error": "#690005",
+                "on-primary-fixed": "#1c1b1c",
+                "inverse-primary": "#5f5e5f",
+                "surface-container-low": "#1c1b1b",
+                "surface-dim": "#141313",
+                "surface-container-highest": "#353434",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary-fixed": "#1d1b19",
+                "on-tertiary": "#32302e",
+                "primary": "#c8c6c7",
+                "inverse-surface": "#e5e2e1",
+                "on-primary": "#313031",
+                "accent": "#c7a360"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "xl": "40px",
+                "container-max": "1440px",
+                "xxl": "80px",
+                "xs": "4px",
+                "gutter": "24px",
+                "lg": "24px",
+                "sm": "8px",
+                "md": "16px",
+                "base": "8px"
+              },
+              "fontFamily": {
+                "display-hero": ["Sora"],
+                "headline-sm": ["Sora"],
+                "body-md": ["Sora"],
+                "body-lg": ["Sora"],
+                "label-caps": ["Sora"],
+                "button": ["Sora"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="antialiased">
+<!-- TopNavBar Implementation -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-display-hero text-headline-sm tracking-tighter text-primary">AURUM GATES</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="product_listing.html">Systems</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="technical_specifications.html">Hardware</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="custom_projects.html">Custom</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="deals_offers.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="technical_specifications.html">Technical</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-primary text-2xl scale-95 active:scale-90 transition-transform">shopping_bag</button>
+<button class="material-symbols-outlined text-primary text-2xl scale-95 active:scale-90 transition-transform border-2 border-accent rounded-full p-1" style="font-variation-settings: 'FILL' 1;">person</button>
+<button class="hidden md:block bg-accent text-on-primary-fixed px-6 py-2 rounded-lg font-button text-sm uppercase tracking-wider hover:opacity-90 transition-opacity">Consultation</button>
+</div>
+</div>
+</header>
+<div class="flex pt-20 min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 hidden md:block border-r border-outline-variant/10 bg-surface-container-lowest sticky top-20 h-[calc(100vh-80px)] p-8">
+<div class="space-y-6">
+<div class="px-4">
+<p class="font-label-caps text-on-surface-variant mb-6 uppercase">Dashboard</p>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 p-3 rounded-lg bg-primary-container text-accent font-semibold border-l-2 border-accent" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md">Profile Overview</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/20 hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-body-md">Order History</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/20 hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-body-md">Saved Configurations</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/20 hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined">security</span>
+<span class="font-body-md">Security Settings</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/20 hover:text-on-surface transition-all" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-body-md">Concierge Support</span>
+</a>
+</nav>
+</div>
+<div class="pt-8 px-4 border-t border-outline-variant/10">
+<a class="flex items-center gap-4 p-3 rounded-lg text-error/80 hover:text-error transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md">Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-8 md:p-12 max-w-7xl">
+<!-- Welcome Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+<div>
+<h1 class="font-display-hero text-display-hero-mobile md:text-headline-sm mb-2">Welcome back, Alexander</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">Manage your architectural security assets, track active fabrications, and customize your gate configurations.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-variant text-on-surface px-6 py-3 rounded-lg font-button flex items-center gap-2 hover:bg-outline-variant/20 transition-all border border-outline-variant/30">
+<span class="material-symbols-outlined">edit</span>
+                        Edit Profile
+                    </button>
+</div>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Profile Summary Card -->
+<div class="glass-card rounded-xl p-8 lg:col-span-1">
+<div class="flex flex-col items-center text-center">
+<div class="w-32 h-32 rounded-full border-2 border-accent p-1 mb-6 relative group">
+<img alt="Profile Avatar" class="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional close-up portrait of a sophisticated man with a well-groomed beard, wearing a tailored charcoal suit against a dark architectural background. The lighting is dramatic and moody, using soft golden rim lighting to separate him from the dark backdrop, reflecting a high-end, luxury brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChj9HrHYgNMiEAJ2kva44c8eLSf3arNKEZ0VR7bDPrTkXoukZOaUr50rgRD-ClaOiwwVSaRYg7OSsXVNssJzH7XhNmEGJkrudI_ajGlklx_UKB86UNeAcjvGdzcQqXEg42YA4RekKFxZ8-ATvmokFaD4CQDb2XYo4P6mvERt4FrVd-oPlCdbx5SxznoSYEg9ScWMkwxJBjHLbB7utJ4iogYDuF76NZpYVyoDrM1PBGybfLt0EhipH7RACdCIBWFwruP7E8fDhMnVSO"/>
+<div class="absolute bottom-0 right-0 bg-accent text-on-primary-fixed p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-on-surface">Alexander Vance</h2>
+<p class="font-body-md text-on-surface-variant mb-6">Principal Architect, Vance &amp; Co.</p>
+<div class="w-full space-y-4 text-left border-t border-outline-variant/10 pt-6">
+<div class="flex justify-between items-center">
+<span class="text-xs uppercase font-label-caps text-on-surface-variant">Membership</span>
+<span class="text-accent font-semibold text-sm">AURUM ELITE</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs uppercase font-label-caps text-on-surface-variant">Email</span>
+<span class="text-on-surface text-sm">a.vance@architect.io</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs uppercase font-label-caps text-on-surface-variant">Account Type</span>
+<span class="text-on-surface text-sm">Commercial Dev</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Orders Section -->
+<div class="lg:col-span-2 space-y-8">
+<div class="glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">package_2</span>
+                                Recent Orders
+                            </h3>
+<a class="text-accent text-sm font-semibold hover:underline" href="product_listing.html">View All</a>
+</div>
+<div class="space-y-6">
+<!-- Order Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg bg-surface-container/50 border border-outline-variant/10 hover:border-accent/20 transition-all">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded bg-black flex items-center justify-center overflow-hidden">
+<img alt="Gate Order" class="w-full h-full object-cover" data-alt="A macro detail shot of a matte black architectural security gate pivot hinge, crafted from premium grade industrial steel. The lighting is cinematic, highlighting the precision machining and the subtle metallic texture. Dark, moody atmosphere with a hint of golden reflection on the metal surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLfB4H9sDYACC1UrSmr7TOaRzSbzoayPeFGo1YTf7LZWPCOwXueEuu95Y1-QUfo4BcEjhlgEDz3O0yRyc9pdap1PI6su8M2QaUmSPey3RxEopClCSGpC2x9JMUsyPIt3VHNQh_I-Sac1vwX_yL-Ea8eFH5tDIjAL_ZUtMYewaDf7J4pqFALVjT-OWELNKIwDiIKfVTdl4aiCwfkTT_3C7ZRVQLR78xMnHBpIdhiZtRLfpWM6YzLq2tx3MAhMJlkJU-M5grSzAAcpv"/>
+</div>
+<div>
+<h4 class="font-body-md font-semibold text-on-surface">Vantage Series V2</h4>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps tracking-widest">Order #AG-49102</p>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-6">
+<div class="text-right">
+<p class="text-xs font-label-caps text-on-surface-variant mb-1 uppercase">Status</p>
+<span class="px-3 py-1 rounded bg-accent/10 text-accent text-xs font-bold border border-accent/20">IN FABRICATION</span>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-accent transition-colors">chevron_right</button>
+</div>
+</div>
+<!-- Order Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg bg-surface-container/50 border border-outline-variant/10 hover:border-accent/20 transition-all">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded bg-black flex items-center justify-center overflow-hidden">
+<img alt="Access Control" class="w-full h-full object-cover" data-alt="A minimalist close-up of a high-tech biometric security sensor integrated into a brushed obsidian gate pillar. The sensor emits a thin, precise amber light ring. The surrounding material has a subtle grain, and the lighting environment is ultra-dark, premium, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWTEx5-aJPgsMGqWE_ZKUm4jdN_1Y90eWvWUj758KIYDf2vIgrsQVA5jE-fakqPpumoGJcMY2Ll6xFPcw7K_Z1HMXlFBSU4UnE-WUpybdP2OMVu4Os2LfbJHa8oh_ItsvYfD9UGCQNevJRGY7QGrCaPGrjy1dLpFA3TByRY-Tdv0e-l0BvfMYhzsrpr2UnsrhTaxoPwD_7xWKBW9pt-BcrzOuq2OXBtRx22pV-Sk-igQ15afMZF-Na2FD115olch1WVX2JjmfNNzUl"/>
+</div>
+<div>
+<h4 class="font-body-md font-semibold text-on-surface">Aurum Biometric Pillar</h4>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps tracking-widest">Order #AG-48905</p>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-6">
+<div class="text-right">
+<p class="text-xs font-label-caps text-on-surface-variant mb-1 uppercase">Status</p>
+<span class="px-3 py-1 rounded bg-secondary-container/30 text-secondary text-xs font-bold border border-outline-variant/20">SHIPPED</span>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-accent transition-colors">chevron_right</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Saved Architectural Specs -->
+<div class="glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-sm flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">description</span>
+                                Saved Architectural Specs
+                            </h3>
+<button class="bg-accent/10 text-accent px-4 py-2 rounded-lg text-xs font-bold border border-accent/20 hover:bg-accent/20 transition-all">New Config</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Spec Card -->
+<div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10 group cursor-pointer hover:border-accent/30 transition-all relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-accent text-3xl">draw</span>
+<span class="text-xs font-label-caps text-on-surface-variant uppercase">Updated 2d ago</span>
+</div>
+<h5 class="font-body-md font-bold text-on-surface mb-2">Modern Estate - Revision 4</h5>
+<p class="text-sm text-on-surface-variant line-clamp-2">24ft Dual-Swing, Matte Charcoal Finish, Integrated Lidar...</p>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+<!-- Spec Card -->
+<div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10 group cursor-pointer hover:border-accent/30 transition-all relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-accent text-3xl">precision_manufacturing</span>
+<span class="text-xs font-label-caps text-on-surface-variant uppercase">Updated 1w ago</span>
+</div>
+<h5 class="font-body-md font-bold text-on-surface mb-2">Industrial Tech Park</h5>
+<p class="text-sm text-on-surface-variant line-clamp-2">Cantilever High-Speed, RFID Auth, Heavy Grade Piling...</p>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats/Metrics Bar -->
+<section class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-card rounded-xl p-6 text-center border-t-2 border-accent">
+<p class="font-label-caps text-on-surface-variant text-xs uppercase mb-2">Total Installations</p>
+<span class="font-display-hero text-headline-sm text-on-surface">12</span>
+</div>
+<div class="glass-card rounded-xl p-6 text-center">
+<p class="font-label-caps text-on-surface-variant text-xs uppercase mb-2">Warranty Support</p>
+<span class="font-display-hero text-headline-sm text-accent">Active</span>
+</div>
+<div class="glass-card rounded-xl p-6 text-center">
+<p class="font-label-caps text-on-surface-variant text-xs uppercase mb-2">Design Revisions</p>
+<span class="font-display-hero text-headline-sm text-on-surface">48</span>
+</div>
+<div class="glass-card rounded-xl p-6 text-center">
+<p class="font-label-caps text-on-surface-variant text-xs uppercase mb-2">Security Tier</p>
+<span class="font-display-hero text-headline-sm text-on-surface">Gold</span>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer Implementation -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest border-t border-outline-variant/10 mt-xxl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xxl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-display-hero text-headline-sm text-primary mb-6">AURUM GATES</h4>
+<p class="font-body-md text-on-surface-variant max-w-md">Precision-engineered architectural security systems. Designed for the most demanding environments, manufactured with artisanal excellence.</p>
+</div>
+<div>
+<h5 class="font-label-caps text-primary uppercase mb-6">Company</h5>
+<nav class="flex flex-col space-y-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="home_page.html">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="custom_projects.html">Manufacturing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="custom_projects.html">Partners</a>
+</nav>
+</div>
+<div>
+<h5 class="font-label-caps text-primary uppercase mb-6">Support</h5>
+<nav class="flex flex-col space-y-4">
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="home_page.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="home_page.html">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="technical_specifications.html">Warranty</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="technical_specifications.html">Maintenance</a>
+</nav>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-outline-variant/5 text-center md:text-left">
+<p class="text-on-surface-variant text-sm opacity-80">© 2024 Aurum Architectural Security. All rights reserved.</p>
+</div>
+</footer>
+<!-- Interactive Layer: Cursor Follow Effect for Glass Cards -->
+<script>
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+                
+                // Dynamic border glow effect
+                card.style.background = `radial-gradient(800px circle at ${x}px ${y}px, rgba(199, 163, 96, 0.05), transparent 40%), rgba(31, 32, 34, 0.6)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'rgba(31, 32, 34, 0.6)';
+            });
+        });
+    </script>
+</body></html>

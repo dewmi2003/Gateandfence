@@ -1,0 +1,401 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aurum Gates | Product Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: #1F2022;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(199, 163, 96, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #C7A360 0%, #A68549 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e3e2e4",
+                        "surface": "#141313",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#0c0b09",
+                        "on-surface-variant": "#c7c6ca",
+                        "secondary-container": "#464749",
+                        "on-background": "#e5e2e1",
+                        "outline-variant": "#46464a",
+                        "on-tertiary": "#32302e",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#1b1c1e",
+                        "on-primary-container": "#7b797a",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-tertiary-container": "#7c7976",
+                        "tertiary-fixed": "#e7e2dd",
+                        "secondary-fixed-dim": "#c7c6c8",
+                        "tertiary": "#cac6c2",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#313031",
+                        "on-secondary": "#2f3032",
+                        "surface-container-high": "#2b2a2a",
+                        "outline": "#919094",
+                        "primary": "#c8c6c7",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "background": "#141313",
+                        "primary-container": "#0b0b0c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353434",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-tint": "#c8c6c7",
+                        "on-secondary-container": "#b5b5b7",
+                        "on-primary-fixed": "#1c1b1c",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "surface-dim": "#141313",
+                        "surface-container-highest": "#353434",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#e5e2e3",
+                        "on-secondary-fixed-variant": "#464749",
+                        "inverse-primary": "#5f5e5f",
+                        "secondary": "#c7c6c8",
+                        "on-primary-fixed-variant": "#474647",
+                        "on-tertiary-fixed-variant": "#494644",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "40px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "section-title": ["Sora"],
+                        "body-lg": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "label-caps": ["Sora"],
+                        "button": ["Sora"],
+                        "body-md": ["Sora"],
+                        "headline-sm": ["Sora"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a href="home_page.html" class="font-display-hero text-headline-sm tracking-tighter text-primary">AURUM GATES</a>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="home_page.html">Systems</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-body-md text-body-md" href="home_page.html">Hardware</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="home_page.html">Custom</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="home_page.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="home_page.html">Technical</a>
+</div>
+<div class="flex items-center gap-md">
+<a href="{{DATA:SCREEN:SCREEN_12}}" class="material-symbols-outlined text-primary text-headline-sm scale-95 active:scale-90 transition-transform">shopping_bag</a>
+<button class="material-symbols-outlined text-primary text-headline-sm scale-95 active:scale-90 transition-transform">person</button>
+<a href="home_page.html" class="hidden md:block bg-primary text-on-primary px-lg py-sm rounded font-button text-button scale-95 active:scale-90 transition-transform text-center">Consultation</a>
+</div>
+</div>
+</nav>
+<main class="pt-xxl">
+<!-- Hero Section & Product Detail -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xxl items-start">
+<!-- Gallery Column -->
+<div class="lg:col-span-7 space-y-md">
+<div class="relative aspect-video rounded-xl overflow-hidden glass-card">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of a premium, matte black architectural gate featuring modern geometric slats. The setting is a luxury contemporary estate at twilight, with warm recessed lighting illuminating the textured metal surfaces. The atmosphere is sophisticated and highly secure, emphasizing clean lines and high-end industrial minimalism in a dark, moody environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdzdOV7QDMaPU89_juPE9_MguahioIIWsoVD66FH2Qgxza5wPeJr5Vql-agyzdS6bd2sJLmx6KDhYbMVLmWT9pSPHIszfAq3WUCSFD6L3_C3BTuAD08lT8Guf1hz7RA9WskgWxqPByWVVE_UVFK57PiW0DxNzXBA9qmtw7liwJgn9w30-p6F2BfRSeaQoTCOum2czwrhkOQ9vo2CY8-FtFj1g7oK6DhoB5EHJyx6IglyJ55krmHK2P0qX8hjfeh0qtae4m2CmMaOr">
+</div>
+<div class="grid grid-cols-4 gap-md">
+<div class="aspect-square rounded-lg overflow-hidden glass-card cursor-pointer border-primary/50">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Close-up detail of a premium architectural gate's heavy-duty hinge and matte finish. The metallic texture is rich and tactile, catching the soft directional light in a high-luxury dark setting. Deep shadows and charcoal tones dominate the aesthetic, highlighting the precision engineering and industrial elegance of the security hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC2uUPa4sYSMl1JPy3LFtxrV_Tcmc263A9Ju42u4TNXvNcl3ixldjgg-jveHEJ5TfLaGiIBji4lqZcmywDTppJ-n9pnutJg6uZ4EEZmNjbHkMDL-TcOw-VC-pOQG_n_yoUBD5vqSfVKHKNVjUE1NvSvG0uRbeGfLSNIaENJs-tAjlbMBmNXk8CcdyrMk_GBKvtpsV9Tb__7WS0KmQ2smPomvOGx8D8Pydayi2ngRkedL7ymOpuwQDyE8dDy4VW6DdJ4uhWoIQIdh1p">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden glass-card cursor-pointer">
+<img data-alt="An expansive view of a minimalist sliding gate installed at a high-end commercial property. The gate features integrated LED strips that glow with a warm amber light, contrasting against the deep ink black of the metal frame. The surrounding environment is sleek concrete and dark foliage under a clear night sky, evoking a sense of ultimate security and modern luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6NISSlN-W_ne0w3yPDX7L5Ma0aNy-smIq0FJd-eJJHP5dljqr0yDwGezJXQVHqEIU_4lEkVTwg0DWFkI7HLeJXr3HpAvfjtvhfIfUw3QiWf3pzLmh_NnOdllVoZEpRExbY-YkSX_MEeo1jo2o96dCJun6f5yZuWER7bU3XfDzHNGjPR3rBAZMSCTAYy1u2R-33keurCCjMy9Y-sDoT_psKbx0EEubbxqzt6b1PjwFhtaxw279QebXfmNPMUG3icwTJYSXlDI4ux--">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden glass-card cursor-pointer">
+<img data-alt="Interior view of a heavy-duty security gate's locking mechanism, showcasing the brushed steel components and meticulous craftsmanship. The lighting is low-key, focused on the mechanical beauty of the hardware. The color palette is restricted to matte blacks, slate grays, and metallic silver, maintaining the project's authoritative and sophisticated industrial minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6q21H1G930hMbOfPVeGlVE-1QBd-7g8r-o4BGpS4OezLz6LVxb080CWhmHLt1HodUrlSjYmfZZBrSZ5FghZm1rDNNMwfDBo3rM835wAX3nRI-6XrDgGy2sRCQw3Cwdn2PMk_L6aTRoxgky5_U0ugeevH0t8MLvjqi39OEF4J2lVk43ZlUv6Bvw2-yMtQyWWTaT9wTsW_-Cr9gVRr0G6VfPgTZCO3wxXZ8vs3kU2AVFmwUd4FjM8KpyPRqqTGWg37V2j92ASPQtSzV">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden glass-card flex items-center justify-center cursor-pointer group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Info Column -->
+<div class="lg:col-span-5 space-y-lg">
+<div>
+<span class="bg-primary/10 text-[#C7A360] px-sm py-xs rounded text-label-caps font-label-caps uppercase tracking-widest">Architectural Series</span>
+<h1 class="font-display-hero text-section-title mt-md text-on-surface">The Obsidian Vanguard</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg mt-base">Precision-engineered forged steel with matte obsidian finish. A statement of uncompromising security and aesthetic restraint for the modern estate.</p>
+</div>
+<div class="flex items-center gap-md py-md border-y border-outline-variant/10">
+<div class="text-on-surface font-display-hero text-headline-sm">$12,450.00</div>
+<div class="text-on-surface-variant line-through text-body-md">$14,800.00</div>
+<div class="ml-auto flex items-center gap-xs">
+<span class="material-symbols-outlined text-[#C7A360]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-on-surface-variant">(124 Reviews)</span>
+</div>
+</div>
+<div class="space-y-md">
+<h3 class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">System Configuration</h3>
+<div class="flex flex-wrap gap-sm">
+<button class="px-lg py-sm rounded-lg glass-card border-primary text-primary font-bold">12ft Standard</button>
+<button class="px-lg py-sm rounded-lg glass-card hover:border-outline-variant text-on-surface-variant">16ft Extended</button>
+<button class="px-lg py-sm rounded-lg glass-card hover:border-outline-variant text-on-surface-variant">20ft Grand</button>
+<button class="px-lg py-sm rounded-lg glass-card hover:border-outline-variant text-on-surface-variant">Custom Fit</button>
+</div>
+</div>
+<div class="flex gap-md pt-lg">
+<a href="{{DATA:SCREEN:SCREEN_12}}" class="flex-1 bg-[#C7A360] text-surface font-button text-button py-md rounded-xl hover:shadow-[0_0_20px_rgba(199,163,96,0.4)] transition-all active:scale-[0.98] text-center">Add to Cart</a>
+<button class="px-lg rounded-xl glass-card text-on-surface border-outline-variant/30 hover:border-[#C7A360] transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-md pt-lg">
+<div class="flex items-center gap-md p-md rounded-xl glass-card">
+<span class="material-symbols-outlined text-[#C7A360]">verified_user</span>
+<div>
+<div class="font-bold text-on-surface">Lifetime</div>
+<div class="text-xs text-on-surface-variant">Frame Warranty</div>
+</div>
+</div>
+<div class="flex items-center gap-md p-md rounded-xl glass-card">
+<span class="material-symbols-outlined text-[#C7A360]">local_shipping</span>
+<div>
+<div class="font-bold text-on-surface">Free Cargo</div>
+<div class="text-xs text-on-surface-variant">Nationwide Delivery</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Table -->
+<section class="bg-surface-container-low py-xxl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-xl">
+<h2 class="font-section-title text-section-title text-on-surface">Engineering Specifications</h2>
+<p class="text-on-surface-variant mt-base">The technical foundation of the Vanguard Series.</p>
+</div>
+<div class="overflow-hidden rounded-xl border border-outline-variant/20">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-highest border-b border-outline-variant/30">
+<tr>
+<th class="p-lg font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Parameter</th>
+<th class="p-lg font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Metric Specification</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-lg font-bold text-on-surface">Primary Material</td>
+<td class="p-lg text-on-surface-variant">A36 Grade Architectural Forged Steel</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container transition-colors">
+<td class="p-lg font-bold text-on-surface">Coating Process</td>
+<td class="p-lg text-on-surface-variant">Electrostatic Dual-Layer Matte Obsidian Powder</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-lg font-bold text-on-surface">Motor Compatibility</td>
+<td class="p-lg text-on-surface-variant">Universal Linear / Articulated Arm Ready</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container transition-colors">
+<td class="p-lg font-bold text-on-surface">Wind Rating</td>
+<td class="p-lg text-on-surface-variant">Sustained 140 MPH / Gusts 165 MPH</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-lg font-bold text-on-surface">Weight (Standard)</td>
+<td class="p-lg text-on-surface-variant">1,240 lbs / 562 kg</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="max-w-container-max mx-auto px-gutter py-xxl">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-section-title text-section-title text-on-surface">Patron Feedback</h2>
+<div class="flex items-center gap-md mt-base">
+<div class="flex text-[#C7A360]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-on-surface font-bold">4.9 out of 5</span>
+</div>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-primary px-lg py-sm rounded-lg transition-colors border border-outline-variant/30 font-button">Write Review</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Review Card -->
+<div class="p-lg rounded-xl glass-card space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-bold text-on-surface">Marcus Thorne</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Verified Proprietor</div>
+</div>
+<div class="flex text-[#C7A360] scale-75 origin-right">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"The aesthetic presence of this gate is unparalleled. It provides the security of a fortress with the elegance of a gallery installation. Installation was surprisingly straightforward."</p>
+</div>
+<!-- Review Card -->
+<div class="p-lg rounded-xl glass-card space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-bold text-on-surface">Elena Vance</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Interior Architect</div>
+</div>
+<div class="flex text-[#C7A360] scale-75 origin-right">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"Specified the Vanguard for a modern client in Aspen. The finish holds up beautifully against harsh elements. Aurum truly understands architectural security."</p>
+</div>
+<!-- Review Card -->
+<div class="p-lg rounded-xl glass-card space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-bold text-on-surface">Julian S.</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Homeowner</div>
+</div>
+<div class="flex text-[#C7A360] scale-75 origin-right">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"A serious upgrade for my property. Heavy, durable, and whisper-quiet operation with the recommended motor package. Worth every penny."</p>
+</div>
+</div>
+</section>
+<!-- Related Products Carousel -->
+<section class="bg-surface-container-lowest py-xxl overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter mb-xl flex justify-between items-end">
+<h2 class="font-section-title text-section-title text-on-surface">Complementary Systems</h2>
+<div class="flex gap-md">
+<button class="material-symbols-outlined p-base rounded-full border border-outline-variant/30 hover:border-primary transition-colors text-primary">arrow_back</button>
+<button class="material-symbols-outlined p-base rounded-full border border-outline-variant/30 hover:border-primary transition-colors text-primary">arrow_forward</button>
+</div>
+</div>
+<div class="flex gap-lg px-gutter max-w-container-max mx-auto overflow-x-auto no-scrollbar pb-lg">
+<!-- Related Product Card 1 -->
+<div class="min-w-[320px] glass-card rounded-xl overflow-hidden group"><a href="{{DATA:SCREEN:SCREEN_9}}" class="block h-full">$0</a></div>
+<!-- Related Product Card 2 -->
+<div class="min-w-[320px] glass-card rounded-xl overflow-hidden group"><a href="{{DATA:SCREEN:SCREEN_9}}" class="block h-full">$0</a></div>
+<!-- Related Product Card 3 -->
+<div class="min-w-[320px] glass-card rounded-xl overflow-hidden group"><a href="{{DATA:SCREEN:SCREEN_9}}" class="block h-full">$0</a></div>
+<!-- Related Product Card 4 -->
+<div class="min-w-[320px] glass-card rounded-xl overflow-hidden group"><a href="{{DATA:SCREEN:SCREEN_9}}" class="block h-full">$0</a></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xxl max-w-container-max mx-auto">
+<div class="space-y-md">
+<div class="font-display-hero text-headline-sm text-primary">AURUM GATES</div>
+<p class="text-on-surface-variant text-sm">Securing legacy estates through architectural excellence and precision engineering since 1994.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">mail</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">call</span>
+</div>
+</div>
+<div class="space-y-md">
+<h5 class="text-on-surface font-bold">Solutions</h5>
+<ul class="space-y-sm text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Residential Systems</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Commercial Security</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Custom Fabrication</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Automation Kits</li>
+</ul>
+</div>
+<div class="space-y-md">
+<h5 class="text-on-surface font-bold">Resources</h5>
+<ul class="space-y-sm text-on-surface-variant">
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Warranty</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Maintenance</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Shipping</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Technical PDFs</li>
+</ul>
+</div>
+<div class="space-y-md">
+<h5 class="text-on-surface font-bold">Legal</h5>
+<ul class="space-y-sm text-on-surface-variant">
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary underline-offset-4 hover:underline cursor-pointer">Terms of Service</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-lg border-t border-outline-variant/10 text-center text-on-surface-variant text-xs opacity-80">
+            © 2024 Aurum Architectural Security. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Simple Interaction logic
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+
+</body></html>

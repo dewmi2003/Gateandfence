@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AURUM GATES | Security Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e3e2e4",
+                        "surface": "#141313",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#0c0b09",
+                        "on-surface-variant": "#c7c6ca",
+                        "secondary-container": "#464749",
+                        "on-background": "#e5e2e1",
+                        "outline-variant": "#46464a",
+                        "on-tertiary": "#32302e",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#1b1c1e",
+                        "on-primary-container": "#7b797a",
+                        "on-tertiary-fixed": "#1d1b19",
+                        "on-tertiary-container": "#7c7976",
+                        "tertiary-fixed": "#e7e2dd",
+                        "secondary-fixed-dim": "#c7c6c8",
+                        "tertiary": "#cac6c2",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#313031",
+                        "on-secondary": "#2f3032",
+                        "surface-container-high": "#2b2a2a",
+                        "outline": "#919094",
+                        "primary": "#c8c6c7",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "background": "#141313",
+                        "primary-container": "#0b0b0c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353434",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-tint": "#c8c6c7",
+                        "on-secondary-container": "#b5b5b7",
+                        "on-primary-fixed": "#1c1b1c",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "surface-dim": "#141313",
+                        "surface-container-highest": "#353434",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#e5e2e3",
+                        "on-secondary-fixed-variant": "#464749",
+                        "inverse-primary": "#5f5e5f",
+                        "secondary": "#c7c6c8",
+                        "on-primary-fixed-variant": "#474647",
+                        "on-tertiary-fixed-variant": "#494644",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xxl": "80px",
+                        "container-max": "1440px",
+                        "xl": "40px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "section-title": ["Sora"],
+                        "body-lg": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "section-title-mobile": ["Sora"],
+                        "label-caps": ["Sora"],
+                        "display-hero-mobile": ["Sora"],
+                        "button": ["Sora"],
+                        "body-md": ["Sora"],
+                        "headline-sm": ["Sora"]
+                    },
+                    "fontSize": {
+                        "section-title": ["40px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "section-title-mobile": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-hero-mobile": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["18px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #0b0b0c; }
+        .glass-card {
+            background: rgba(31, 32, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(200, 198, 199, 0.3);
+            background: rgba(42, 43, 46, 0.8);
+            transform: translateY(-4px);
+        }
+        .search-glow:focus-within {
+            box-shadow: 0 0 20px rgba(200, 198, 199, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #46464a; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface custom-scrollbar">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a href="home_page.html" class="font-display-hero text-headline-sm tracking-tighter text-primary dark:text-primary">AURUM GATES</a>
+<nav class="hidden md:flex items-center space-x-lg">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="home_page.html">Systems</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="home_page.html">Hardware</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="home_page.html">Custom</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="home_page.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md" href="home_page.html">Technical</a>
+</nav>
+<div class="flex items-center space-x-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all p-2 scale-95 active:scale-90" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all p-2 scale-95 active:scale-90" data-icon="person">person</button>
+<button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-button hover:opacity-90 transition-all scale-95 active:scale-90">Consultation</button>
+</div>
+</div>
+</header>
+<main class="pt-xxl min-h-screen">
+<div class="max-w-container-max mx-auto px-gutter py-xl">
+<!-- Global Search Interface -->
+<div class="relative z-10 mb-xl max-w-3xl mx-auto">
+<div class="search-glow flex items-center bg-surface-container rounded-xl border border-outline-variant/30 p-2 transition-all">
+<span class="material-symbols-outlined px-md text-outline" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface font-body-lg" placeholder="Search architectural security systems..." type="text" value="Titanium Reinforcement">
+<a href="{{DATA:SCREEN:SCREEN_3}}" class="bg-surface-container-high hover:bg-surface-bright px-lg py-2 rounded-lg text-primary font-button transition-colors flex items-center justify-center">Search</a>
+</div>
+<!-- Recent Searches Section -->
+<div class="mt-md flex flex-wrap gap-sm items-center">
+<span class="text-label-caps font-label-caps text-on-surface-variant">RECENT SEARCHES:</span>
+<button class="flex items-center bg-surface-container-low px-md py-1 rounded-full border border-outline-variant/20 hover:border-primary/50 transition-colors text-xs text-on-surface-variant">
+<span class="">Biometric Gates</span>
+<span class="material-symbols-outlined text-[14px] ml-1" data-icon="close">close</span>
+</button>
+<button class="flex items-center bg-surface-container-low px-md py-1 rounded-full border border-outline-variant/20 hover:border-primary/50 transition-colors text-xs text-on-surface-variant">
+<span class="">Custom Bronze Hardare</span>
+<span class="material-symbols-outlined text-[14px] ml-1" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- Content Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Sidebar Filters -->
+<aside class="lg:col-span-3 space-y-xl">
+<div>
+<h3 class="font-headline-sm text-on-surface mb-md">Filters</h3>
+<div class="h-[1px] bg-outline-variant/30 w-full mb-md"></div>
+<!-- Filter Groups -->
+<div class="space-y-lg">
+<details class="group" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none py-2 font-button text-primary">
+<span class="">Category</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-sm space-y-sm">
+<label class="flex items-center space-x-md cursor-pointer hover:text-primary transition-colors">
+<input checked="" class="rounded border-outline-variant bg-surface-container text-primary focus:ring-primary/20" type="checkbox">
+<span class="text-body-md">Driveway Gates</span>
+</label>
+<label class="flex items-center space-x-md cursor-pointer hover:text-primary transition-colors">
+<input class="rounded border-outline-variant bg-surface-container text-primary focus:ring-primary/20" type="checkbox">
+<span class="text-body-md">Pedestrian Entry</span>
+</label>
+<label class="flex items-center space-x-md cursor-pointer hover:text-primary transition-colors">
+<input checked="" class="rounded border-outline-variant bg-surface-container text-primary focus:ring-primary/20" type="checkbox">
+<span class="text-body-md">Access Controls</span>
+</label>
+</div>
+</details>
+<details class="group" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none py-2 font-button text-primary">
+<span class="">Materiality</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-sm space-y-sm">
+<div class="flex flex-wrap gap-xs">
+<a href="{{DATA:SCREEN:SCREEN_3}}" class="bg-surface-container-high px-md py-1 rounded text-xs border border-outline-variant hover:border-primary transition-all flex items-center justify-center">$0</a>
+<a href="{{DATA:SCREEN:SCREEN_3}}" class="bg-surface-container-high px-md py-1 rounded text-xs border border-outline-variant hover:border-primary transition-all flex items-center justify-center">$0</a>
+<a href="{{DATA:SCREEN:SCREEN_3}}" class="bg-surface-container-high px-md py-1 rounded text-xs border border-outline-variant hover:border-primary transition-all flex items-center justify-center">$0</a>
+<a href="{{DATA:SCREEN:SCREEN_3}}" class="bg-surface-container-high px-md py-1 rounded text-xs border border-outline-variant hover:border-primary transition-all flex items-center justify-center">$0</a>
+</div>
+</div>
+</details>
+<div>
+<h4 class="font-button text-primary mb-sm">Price Range</h4>
+<div class="px-xs pt-md">
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
+<div class="flex justify-between mt-sm text-xs text-on-surface-variant font-label-caps">
+<span class="">$5k</span>
+<span class="">$100k+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Promo -->
+<div class="relative overflow-hidden rounded-xl aspect-[3/4] p-md flex flex-col justify-end">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover grayscale opacity-40" data-alt="A moody, high-contrast architectural photograph of a sleek, modern titanium security gate at sunset. The lighting is dramatic and low-key, highlighting the brushed metal textures and clean geometric lines of the structure. The setting is a luxury estate's private driveway with soft ambient lights reflecting off the metal surfaces, creating an aura of exclusive security and premium architectural design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjWpGJOU1jNYu3zJTo66cg09nKmXHMSbC2j1J5qmxS-gGHy8frOas2ffR-_G5gtWNRPZkRsLj-Bvj98rES1TyFvawOKJJltGZAez3mdqFF74EkJYHmEtOoMApI8XBRVs_m_xq4p1XtDrtJgvwVydNb4PVVedSkYE3bRGLJp5YvR1xKZdElcVMe_dL_ZlRrjHbFqy4CqMBgr03JDLIw8FA3sb9K8kQnBsWR0Y5Oy8rOwDZJG6QPqpyT4PIXBcsId4VALhlJXCmB_xCm">
+<div class="relative z-20">
+<span class="bg-primary text-on-primary font-label-caps px-sm py-1 rounded mb-sm inline-block">FEATURED</span>
+<h4 class="font-headline-sm text-on-surface">The Onyx Series</h4>
+<p class="text-on-surface-variant text-sm mb-md">Next-generation stealth access controls.</p>
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="w-full py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white rounded transition-all flex items-center justify-center">Explore Series</a>
+</div>
+</div>
+</aside>
+<!-- Results Main Area -->
+<div class="lg:col-span-9">
+<!-- Search Header Info -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-lg">
+<h2 class="font-section-title text-section-title text-on-surface">12 Results for "Titanium"</h2>
+<div class="flex items-center space-x-md mt-md md:mt-0">
+<span class="text-on-surface-variant font-body-md">Sort by:</span>
+<select class="bg-surface-container border-none text-primary font-button rounded-lg focus:ring-1 focus:ring-primary">
+<option>Most Relevant</option>
+<option>Newest Release</option>
+<option>Premium Tier</option>
+</select>
+</div>
+</div>
+<!-- Grid of Results -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg" id="results-grid">
+<!-- Result Card 1 -->
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="glass-card rounded-xl overflow-hidden flex flex-col">$0</a>
+<!-- Result Card 2 -->
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="glass-card rounded-xl overflow-hidden flex flex-col">$0</a>
+<!-- Result Card 3 -->
+<a href="{{DATA:SCREEN:SCREEN_9}}" class="glass-card rounded-xl overflow-hidden flex flex-col">$0</a>
+</div>
+<!-- No Results State (Hidden by default, shown for demo) -->
+<div class="hidden flex flex-col items-center justify-center py-xxl text-center" id="no-results">
+<div class="relative mb-xl">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+<span class="material-symbols-outlined text-[80px] text-outline-variant relative z-10" data-icon="search_off">search_off</span>
+</div>
+<h3 class="font-section-title text-section-title text-on-surface mb-md">No matches found</h3>
+<p class="text-on-surface-variant max-w-md mx-auto mb-xl">We couldn't find any security systems matching your exact criteria. Try adjusting your filters or search terms for a broader range.</p>
+<div class="flex space-x-md">
+<button class="bg-primary text-on-primary px-xl py-3 rounded-lg font-button hover:opacity-90 transition-all" onclick="resetSearch()">Clear All Filters</button>
+<button class="border border-outline text-on-surface px-xl py-3 rounded-lg font-button hover:bg-surface-container transition-all">Speak to an Architect</button>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xxl flex justify-center items-center space-x-md">
+<button class="material-symbols-outlined p-2 border border-outline-variant/30 rounded-lg hover:bg-surface-container-high transition-all" data-icon="chevron_left">chevron_left</button>
+<div class="flex space-x-sm font-button">
+<button class="w-10 h-10 rounded-lg bg-primary text-on-primary">1</button>
+<button class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-on-surface-variant">2</button>
+<button class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-on-surface-variant">3</button>
+<span class="px-2 text-outline-variant self-end pb-2">...</span>
+<button class="w-10 h-10 rounded-lg hover:bg-surface-container-high text-on-surface-variant">8</button>
+</div>
+<button class="material-symbols-outlined p-2 border border-outline-variant/30 rounded-lg hover:bg-surface-container-high transition-all" data-icon="chevron_right">chevron_right</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter py-xxl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-hero text-headline-sm text-primary mb-md">AURUM GATES</div>
+<p class="text-on-surface-variant font-body-md opacity-80">Forging architectural legacies through superior security and timeless design.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-lg">QUICK LINKS</h4>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Systems</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Hardware</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Custom Fabrication</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Security Consulting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-lg">RESOURCES</h4>
+<ul class="space-y-sm">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Terms of Service</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Warranty Details</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md opacity-80" href="home_page.html">Maintenance Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-lg">STAY INFORMED</h4>
+<p class="text-on-surface-variant text-sm mb-md opacity-80">Access exclusive insights on architectural security.</p>
+<div class="flex">
+<input class="bg-surface-container border-none rounded-l-lg w-full focus:ring-1 focus:ring-primary text-sm" placeholder="Email" type="email">
+<button class="bg-primary text-on-primary px-md rounded-r-lg hover:opacity-90 transition-all material-symbols-outlined" data-icon="arrow_forward">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-lg border-t border-outline-variant/10 flex justify-between items-center text-xs text-outline-variant">
+<span class="">© 2024 Aurum Architectural Security. All rights reserved.</span>
+<div class="flex space-x-md">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+</footer>
+<script>
+        function resetSearch() {
+            // For demonstration: Toggle views to show results again
+            document.getElementById('results-grid').classList.remove('hidden');
+            document.getElementById('no-results').classList.add('hidden');
+        }
+
+        // Add a simple interaction listener to show "No Results" state when search is empty or specific keyword
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('input', (e) => {
+            if(e.target.value.toLowerCase() === 'void') {
+                document.getElementById('results-grid').classList.add('hidden');
+                document.getElementById('no-results').classList.remove('hidden');
+            } else {
+                resetSearch();
+            }
+        });
+    </script>
+
+
+</body></html>
