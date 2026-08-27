@@ -1,0 +1,1 @@
+{"name":"aurum-gates-static","private":true,"scripts":{"build":"node tools/build.mjs","lint":"node tools/check.mjs","test":"node tools/check.mjs"}}
