@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURUM GATES</title>
+<script>
+/* Static-host deep-link bootstrap (GitHub Pages & friends):
+   converts /path?query into /#/path?query and re-enters the SPA. */
+(function () {
+  var path = window.location.pathname || '/';
+  var search = window.location.search || '';
+  if (path !== '/' && path !== '/index.html') {
+    window.location.replace(window.location.origin + '/#/' + path.replace(/^\/+/, '') + search);
+  } else {
+    window.location.replace(window.location.origin + '/');
+  }
+})();
+</script>
+</head>
+<body style="background:#0b0b0c;color:#e8e6e3;font-family:system-ui;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+<p>Loading AURUM GATES…</p>
+</body>
+</html>
