@@ -117,6 +117,8 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
   box-shadow: var(--shadow); padding: 22px 24px; display: none;
 }
 .nav-item.open .drop { display: block; }
+.drop-right { left: auto; right: -90px; }
+@media (max-width: 1279px) { .drop-right { right: -40px; } }
 .drop-cols { display: flex; gap: 34px; }
 .drop-col { min-width: 190px; }
 .drop-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; font-weight: 600; }

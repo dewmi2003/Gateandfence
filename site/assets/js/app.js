@@ -95,8 +95,8 @@
   }
 
   /* ============================ shell ============================ */
-  function dropdown(label, cols) {
-    return '<div class="nav-item has-drop"><button class="nav-btn" aria-expanded="false" aria-haspopup="true">' + label + '<span class="caret" aria-hidden="true">▾</span></button>' +
+  function dropdown(label, cols, extraCls) {
+    return '<div class="nav-item has-drop' + (extraCls ? ' ' + extraCls : '') + '"><button class="nav-btn" aria-expanded="false" aria-haspopup="true">' + label + '<span class="caret" aria-hidden="true">▾</span></button>' +
       '<div class="drop"><div class="drop-cols">' + cols.map(function (col) {
         return '<div class="drop-col"><p class="drop-label">' + esc(col.label) + '</p><ul>' + col.links.map(function (l) {
           return '<li><a data-link href="' + href(l[0]) + '">' + esc(l[1]) + '</a></li>';
@@ -125,7 +125,7 @@
       dropdown('Access Control', [
         { label: 'Entry', links: [['access-control', 'Access Control Overview'], ['products/access-control/telephone-entry', 'Telephone Entry'], ['products/access-control/intercom', 'Intercoms'], ['products/access-control/keypads', 'Keypads'], ['products/access-control/card-readers', 'Card & Proximity Readers']] },
         { label: 'Control & Safety', links: [['products/access-control/remote-controls', 'Remote Controls'], ['products/access-control/safety-systems', 'Safety Systems'], ['products/accessories/control-stations', 'Control Stations']] }
-      ]) +
+      ], 'drop-right') +
       '<a class="nav-link" data-link href="' + href('resources') + '">Resources</a>' +
       '<a class="nav-link" data-link href="' + href('about') + '">About</a>' +
       '<a class="nav-link" data-link href="' + href('contact') + '">Contact</a>' +
